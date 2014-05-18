@@ -1,0 +1,17 @@
+<div class='row'>
+	<span >Schedule for {{name}}</span>
+</div>
+<div class='row' id='teacher'>
+<table class="table">
+	<tr>
+		<th>Period</th>
+		<th>Class</th>
+	</tr>
+	{{#each schedule}}
+	<tr>
+          <td>{{period}}</td>
+          <td>{{className}}</td>
+    </tr>
+    {{/each}}
+</table>
+</div>

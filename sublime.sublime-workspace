@@ -1,0 +1,938 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"a",
+				"allStudentList"
+			],
+			[
+				"all",
+				"allStudentList"
+			],
+			[
+				"comm",
+				"commonIds"
+			],
+			[
+				"get",
+				"getIdList"
+			],
+			[
+				"sc",
+				"schedule"
+			],
+			[
+				"sch",
+				"scheduleArray"
+			],
+			[
+				"al",
+				"allCourseList"
+			],
+			[
+				"se",
+				"selectedStudentList"
+			],
+			[
+				"sub",
+				"submitCheck"
+			],
+			[
+				"ad",
+				"address1"
+			],
+			[
+				"valid",
+				"validMiddle"
+			],
+			[
+				"va",
+				"validInput"
+			],
+			[
+				"on",
+				"onValChange"
+			],
+			[
+				"fun",
+				"functionName"
+			],
+			[
+				"to",
+				"toLowerCase"
+			],
+			[
+				"req",
+				"requirejs-text"
+			],
+			[
+				"e",
+				"extend"
+			],
+			[
+				"def",
+				"defaultAlert"
+			],
+			[
+				"arg",
+				"arguments"
+			],
+			[
+				"funky",
+				"funkyFunc"
+			],
+			[
+				"ex",
+				"expect"
+			],
+			[
+				"de",
+				"defaulter"
+			],
+			[
+				"js",
+				"jsbeautify"
+			],
+			[
+				"funk",
+				"funkyFunc"
+			],
+			[
+				"F",
+				"FunkyFuncFactory"
+			],
+			[
+				"exe",
+				"execute"
+			],
+			[
+				"bower",
+				"bower_components"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 829,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/models/course.js",
+			"settings":
+			{
+				"buffer_size": 454,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/test/specList.js",
+			"settings":
+			{
+				"buffer_size": 216,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/applicationRun.js",
+			"settings":
+			{
+				"buffer_size": 847,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/views/selectView.js",
+			"settings":
+			{
+				"buffer_size": 656,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/singletons/allStudentList.js",
+			"settings":
+			{
+				"buffer_size": 170,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/tpl/bodyTemplate.html",
+			"settings":
+			{
+				"buffer_size": 278,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/tpl/selectContainer.html",
+			"settings":
+			{
+				"buffer_size": 173,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "define(function(require) {\n  'use strict';\n  var Backbone = require('backbone');\n  var StudentList = require('collections/studentList');\n  var CourseList=require('collections/courseList');\n  var allStudentList = require('singletons/allStudentList');\n  var method = require('util/method');\n\n  return StudentList.extend({\n    initialize: function() {\n      var select = method(this, 'select');\n      Backbone.on('student_select', select);\n      var unselect = method(this, 'unselect');\n      Backbone.on('student_unselect', unselect);\n    },\n    select: function(id) {\n      var student = allStudentList.get(id);\n      this.add(student);\n    },\n    unselect: function(id) {\n      var student = allStudentList.get(id);\n      this.remove(student);\n    }\n  });\n});\n",
+			"file": "js/collections/selectedStudentList.js",
+			"file_size": 708,
+			"file_write_time": 130447649879538177,
+			"settings":
+			{
+				"buffer_size": 760,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/test/spec/models/testStudent.js",
+			"settings":
+			{
+				"buffer_size": 930,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/test/spec/collections/testCourseList.js",
+			"settings":
+			{
+				"buffer_size": 585,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/collections/courseList.js",
+			"settings":
+			{
+				"buffer_size": 215,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 52 files for \"toEqual\"\n\nC:\\Projects\\Classes\\bower_components\\jasmine\\src\\core\\matchers\\requireMatchers.js:\n   12        \"toBeUndefined\",\n   13        \"toContain\",\n   14:       \"toEqual\",\n   15        \"toHaveBeenCalled\",\n   16        \"toHaveBeenCalledWith\",\n\nC:\\Projects\\Classes\\bower_components\\jasmine\\src\\core\\matchers\\toEqual.js:\n    1: getJasmineRequireObj().toEqual = function() {\n    2  \n    3:   function toEqual(util, customEqualityTesters) {\n    4      customEqualityTesters = customEqualityTesters || [];\n    5  \n    .\n   17    }\n   18  \n   19:   return toEqual;\n   20  };\n   21  \n\n4 matches across 2 files\n\n\nSearching 52 files for \"equals\"\n\nC:\\Projects\\Classes\\bower_components\\jasmine\\src\\core\\matchers\\matchersUtil.js:\n    3  \n    4    return {\n    5:     equals: function(a, b, customTesters) {\n    6        customTesters = customTesters || [];\n    7  \n\nC:\\Projects\\Classes\\bower_components\\jasmine\\src\\core\\matchers\\toEqual.js:\n   10          };\n   11  \n   12:         result.pass = util.equals(actual, expected, customEqualityTesters);\n   13  \n   14          return result;\n\nC:\\Projects\\Classes\\bower_components\\jasmine\\src\\core\\matchers\\toThrow.js:\n   31          }\n   32  \n   33:         if (util.equals(thrown, expected)) {\n   34            result.pass = true;\n   35            result.message = \"Expected function not to throw \" + j$.pp(expected) + \".\";\n\nC:\\Projects\\Classes\\bower_components\\jasmine\\src\\core\\matchers\\toThrowError.js:\n   42  \n   43          if (errorType && message) {\n   44:           if (thrown.constructor == errorType && util.equals(thrown.message, message)) {\n   45              return pass(\"Expected function not to throw \" + name + \" with message \\\"\" + message + \"\\\".\");\n   46            } else {\n\nC:\\Projects\\Classes\\bower_components\\jasmine\\src\\core\\ObjectContaining.js:\n   19          mismatchKeys.push(\"expected has key '\" + property + \"', but missing from actual.\");\n   20        }\n   21:       else if (!j$.matchersUtil.equals(this.sample[property], other[property])) {\n   22          mismatchValues.push(\"'\" + property + \"' was '\" + (other[property] ? j$.util.htmlEscape(other[property].toString()) : other[property]) + \"' in actual, but was '\" + (this.sample[property] ? j$.util.htmlEscape(this.sample[property].toString()) : this.sample[property]) + \"' in expected.\");\n   23        }\n\n5 matches across 5 files\n\n\n",
+			"settings":
+			{
+				"buffer_size": 2374,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "data/student-schedules_formatted.json",
+			"settings":
+			{
+				"buffer_size": 4337,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Projects/Classes/js/singletons/filteredCourses.js",
+		"/C/Projects/Classes/js/models/student.js",
+		"/C/Projects/Classes/js/views/selectContainer.js",
+		"/C/Projects/Classes/html/application.html",
+		"/C/Projects/Classes/js/collections/studentList.js",
+		"/C/Projects/Classes/js/test/spec/models/testCourse.js",
+		"/C/Projects/Classes/js/test/spec/singletons/testAllCourseList.js",
+		"/C/Projects/Classes/js/singletons/selectedStudentList.js",
+		"/C/Projects/CreditCard/js/test/specList.js",
+		"/C/Projects/CreditCard/js/models/validAlways.js",
+		"/C/Projects/CreditCard/js/models/validInput.js",
+		"/C/Projects/CreditCard/js/models/validCheck.js",
+		"/C/Projects/CreditCard/js/test/spec/models/testValidCheck.js",
+		"/C/Projects/CreditCard/js/tpl/error.html",
+		"/C/Projects/CreditCard/js/applicationRun.js",
+		"/C/Projects/CreditCard/js/test/spec/models/testValidEmail.js",
+		"/C/Projects/CreditCard/js/test/spec/models/testValidState.js",
+		"/C/Projects/CreditCard/js/models/validState.js",
+		"/C/Projects/CreditCard/js/test/spec/models/testValidMiddle.js",
+		"/C/Projects/CreditCard/js/models/validMiddle.js",
+		"/C/Projects/CreditCard/js/tpl/t.html",
+		"/C/Projects/CreditCard/js/views/vaildInputView.js",
+		"/C/Projects/CreditCard/js/test/testAmdconfig.js",
+		"/C/Projects/CreditCard/js/test/testMain.js",
+		"/C/Projects/CreditCard/html/test.html",
+		"/C/Projects/CreditCard/js/test/spec/util/testMethod.js",
+		"/C/Projects/CreditCard/js/test/testRun.js",
+		"/C/Projects/CreditCard/js/testMain.js",
+		"/C/Projects/CreditCard/bower.json",
+		"/C/Projects/CreditCard/js/test/spec/models/testValidInput.js",
+		"/C/Projects/CreditCard/js/amdconfig.js",
+		"/C/Projects/CreditCard/js/testAmdconfig.js",
+		"/C/Projects/CreditCard/html/application.html",
+		"/C/Projects/CreditCard/js/util/method.js",
+		"/C/Projects/CreditCard/js/specList.js",
+		"/C/Projects/CreditCard/js/testRun.js",
+		"/C/Projects/CreditCard/.gitignore",
+		"/C/Projects/CreditCard/js/applicationMain.js",
+		"/C/Projects/CreditCard/js/tpl/json/states.js",
+		"/C/Users/Joe/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Projects/functional/js/bootstrap.js",
+		"/C/Projects/mercury/framework/node/simpleServer.js",
+		"/C/Projects/CreditCard/server.js",
+		"/C/Projects/CreditCard/readme.txt",
+		"/C/Projects/CreditCard/package.json",
+		"/C/Projects/CreditCard/js/hb/t.tpl",
+		"/C/Projects/CreditCard/script/application-main.js",
+		"/C/Projects/functional/server.js",
+		"/C/Projects/functional/spec/testFunky.js",
+		"/C/Projects/functional/spec/testDefaulter.js",
+		"/C/Projects/functional/js/specList.js",
+		"/C/DataAnalysis/sample.r",
+		"/C/Projects/functional/package.json",
+		"/C/Projects/functional/Gruntfile.js",
+		"/C/Projects/functional/SpecRunner.html",
+		"/C/Projects/mercury/framework/Gruntfile.js",
+		"/C/Projects/mercury/framework/package.json",
+		"/C/Projects/functional/js/src/environment.js",
+		"/C/Projects/functional/spec/testEnvironment.js",
+		"/C/Projects/functional/js/src/sigChange.js",
+		"/C/Projects/functional/spec/testArgList.js",
+		"/C/Projects/functional/js/src/Funky.js",
+		"/C/Projects/hatch-site/package.json",
+		"/C/Projects/functional/Todo",
+		"/C/Projects/functional/js/src/argList.js",
+		"/C/Projects/functional/js/src/defaulter.js",
+		"/C/Projects/functional/js/src/FunkyBunch.js",
+		"/C/Projects/functional/spec/testFunkyBunch.js",
+		"/C/Users/Joe/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Projects/functional/npm-debug.log",
+		"/C/Projects/functional/js/src/functional.js",
+		"/C/Projects/functional/js/src/inherit.js",
+		"/C/Projects/functional/js/src/testArgList.js",
+		"/C/Projects/functional/spec/a.js",
+		"/C/Users/Joe/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
+		"/C/Projects/functional/js/spec/PlayerSpec.js",
+		"/C/Projects/functional/js/src/matcher.js",
+		"/C/Projects/mercury/uif/trunk/node/simpleServer.js",
+		"/C/Projects/mercury/uif/trunk/node/package.json",
+		"/C/Projects/mercury/uif/trunk/Gruntfile.js",
+		"/C/Projects/mercury/uif/trunk/package.json",
+		"/C/Projects/mercury/uif/trunk/node/karma.conf.js",
+		"/C/Users/Joe/Desktop/temp/temp.html",
+		"/C/Projects/mercury/uif/trunk/node/package.json1",
+		"/C/Projects/matcher/SpecRunner.html",
+		"/C/Projects/matcher/src/bootstrap.js",
+		"/C/Projects/matcher/src/matcher.js",
+		"/C/Projects/matcher/spec/matcherSpec.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Projects\\Classes\\bower_components\\jasmine\\src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"equals",
+			"toEqual",
+			"equals",
+			"validMiddle",
+			"help-inline",
+			"  it(\"basic case\", function() {\n  	var a={prop:1,func(){return this.prop}};\n  	var m=method(a,'func');\n  	expect(m()).toEqual(1);\n  });",
+			"spyOn",
+			"callThrough",
+			"j"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"validState"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 829,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								673,
+								673
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 18.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/models/course.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 454,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								454,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/test/specList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 216,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								210,
+								210
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/applicationRun.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 847,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								806,
+								806
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/views/selectView.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 656,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								527,
+								527
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/singletons/allStudentList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								170,
+								170
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/tpl/bodyTemplate.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 278,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								265,
+								265
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/tpl/selectContainer.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 173,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "js/collections/selectedStudentList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 760,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								760
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "js/test/spec/models/testStudent.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								930,
+								930
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "js/test/spec/collections/testCourseList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								585,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "js/collections/courseList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 215,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								214,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2374,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										187,
+										194
+									],
+									[
+										373,
+										380
+									],
+									[
+										422,
+										429
+									],
+									[
+										574,
+										581
+									],
+									[
+										779,
+										785
+									],
+									[
+										1013,
+										1019
+									],
+									[
+										1225,
+										1231
+									],
+									[
+										1576,
+										1582
+									],
+									[
+										1979,
+										1985
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								2374,
+								2374
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 443.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "data/student-schedules_formatted.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4337,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4333,
+								3976
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3726.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "sublime.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 289.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
